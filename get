@@ -1,0 +1,3 @@
+return function(Part)
+    return game:GetService(Part) or game:FindService(Part)
+end
