@@ -84,8 +84,8 @@ local stuff = Instance.new("Model",char)
 stuff.Name = "Hammur"
 local rs = weld(char.Torso,ra,CFrame.new(1.25,.5,0), CFrame.new(-.25,.5,0),stuff)
 local ls = weld(char.Torso,la,CFrame.new(-1.25,.5,0), CFrame.new(.25,.5,0),stuff)
-ls.Part1.FrontSurface = "Hinge"
-rs.Part1.FrontSurface = "Hinge"
+--ls.Part1.FrontSurface = "Hinge"
+--rs.Part1.FrontSurface = "Hinge"
 local rs0 = rs.C0
 local ls0 = ls.C0
 
@@ -350,7 +350,14 @@ kucon = mouse.KeyUp:connect(oc(function(k)
 		sprint = false
 	end
 end))
-
+task.spawn(function()
+wait(0.2)
+game.StarterGui:SetCore("SendNotification", {
+Title = "credits to the original owner"; -- the title 
+Text = "my dc: canwegetmuchhigher523_93660"; -- what the text says 
+Duration = 5; -- how long the notification should in secounds
+})
+end)
 kdcon = mouse.KeyDown:connect(oc(function(k)
 	if k == "0" and not sprint then
 		pcall(function() char.Humanoid.WalkSpeed = char.Humanoid.WalkSpeed * 1.5 end)
